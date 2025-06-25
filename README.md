@@ -110,17 +110,3 @@ def lambda_handler(event, context):
 ### Keboola
 Pre integráciu s Keboola použite Generic Extractor konfiguráciu v súbore `keboola-config.json`.
 
-## Monitoring
-
-Aplikácia loguje všetky dôležité udalosti. Pre produkčné nasadenie odporúčame:
-- Centralizované logovanie (ELK stack, CloudWatch)
-- Metriky (Prometheus, Grafana)
-- Alerting pri zlyhaní extrakcie
-
-## Licencia
-
-MIT License
-
-## Podpora
-
-Pre otázky a podporu kontaktujte: your-email@example.com
