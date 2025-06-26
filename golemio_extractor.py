@@ -131,7 +131,7 @@ def scheduled_extraction():
     """
     Funkcia pre naplánovanú extrakciu
     """
-    extractor = GolemioLibraryExtractor()
+    extractor = GolemioLibraryExtractor(api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzczMCwiaWF0IjoxNzUwOTA0OTMwLCJleHAiOjExNzUwOTA0OTMwLCJpc3MiOiJnb2xlbWlvIiwianRpIjoiYjQyZDYxOTYtZmM1My00ZWYwLTk0YWItOGU2MmUyOGQzNzQwIn0.3zIID-HEsLrSWLUfgv6RYkUEK2n_CIcLMb-mBm-7OKc')
     extractor.run_extraction()
 
 if __name__ == "__main__":
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     extractor.run_extraction()
     
     # Uncomment pre produkciu
-    # while True:
-    #     schedule.run_pending()
-    #     time.sleep(60)
+    #while True:
+         #schedule.run_pending()
+         #time.sleep(60)
 
