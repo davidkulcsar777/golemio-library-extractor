@@ -102,6 +102,3 @@ def lambda_handler(event, context):
     }
 ```
 
-### Keboola
-Pre integráciu s Keboola použite Generic Extractor konfiguráciu v súbore `keboola-config.json`.
-
