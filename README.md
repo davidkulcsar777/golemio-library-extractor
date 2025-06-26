@@ -44,14 +44,9 @@ GOLEMIO_API_KEY=váš-api-kľúč
 
 ## Použitie
 
-### Jednorazová extrakcia
+### Jednorazová a naplánovaná extrakcia
 ```bash
 python golemio_extractor.py
-```
-
-### Naplánovaná extrakcia (denne o 7:00)
-```bash
-python scheduler.py
 ```
 
 ### Použitie ako modul
