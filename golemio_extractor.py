@@ -16,11 +16,12 @@ class GolemioLibraryExtractor:
     def __init__(self, api_key: Optional[str] = None):
         self.base_url = "https://api.golemio.cz/v2"
         self.api_key = api_key or os.environ.get('GOLEMIO_API_KEY')
+        print(f"DEBUG: Using API key: {self.api_key}")  # Add this line
         self.headers = {
             'X-Access-Token': self.api_key,
             'Content-Type': 'application/json'
         }
-        
+
         # Nastavenie logovania
         logging.basicConfig(
             level=logging.INFO,
@@ -138,10 +139,11 @@ if __name__ == "__main__":
     schedule.every().day.at("07:00").do(scheduled_extraction)
     
     # Pre testovanie - spustí extrakciu ihneď
-    extractor = GolemioLibraryExtractor()
+    extractor = GolemioLibraryExtractor(api_key='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzczMCwiaWF0IjoxNzUwOTA0OTMwLCJleHAiOjExNzUwOTA0OTMwLCJpc3MiOiJnb2xlbWlvIiwianRpIjoiYjQyZDYxOTYtZmM1My00ZWYwLTk0YWItOGU2MmUyOGQzNzQwIn0.3zIID-HEsLrSWLUfgv6RYkUEK2n_CIcLMb-mBm-7OKc')
     extractor.run_extraction()
     
     # Uncomment pre produkciu
     # while True:
     #     schedule.run_pending()
     #     time.sleep(60)
+
