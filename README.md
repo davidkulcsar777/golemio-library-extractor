@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Konfigurácia
 
-1. Získajte API kľúč z [Golemio Developer Portal](https://api.golemio.cz/docs)
+1. Získajte API kľúč z [Golemio Portal](https://api.golemio.cz/api-keys)
 
 2. Nastavte environment variable:
 ```bash
